@@ -18,7 +18,9 @@ export default function NewsContent({news,newsResult}) {
             { news ?( 
             news.map((newsItem) => (
                  <NewsCard  newsItem={newsItem} key={newsItem.title} newsResult={newsResult}/>
-            )) ) : "select a category first" }
+            )) ) : <div class="spinner-border text-secondary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div> }
            
 
         </Container>

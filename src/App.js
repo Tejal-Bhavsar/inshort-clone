@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     getdata()
-  },[category])
+  },[category,newsResult])
 
   const getdata = async ( ) => {
     const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${APIKEY}&category=${category}`)
@@ -24,7 +24,6 @@ function App() {
     setResult(data.totalResult)
      
      console.log(news,"naya news")
-     
 
   }
   return (
