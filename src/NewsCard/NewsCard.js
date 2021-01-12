@@ -30,7 +30,7 @@ const NewsCard = ({ newsItem }) => {
               <b>short </b>
             </a>{" "}
             <span className="muted">
-              {" "}
+              
               by {newsItem.author ? newsItem.author : "unknown"} /{" "}
               {time
                 ? `${hour - 12}:${date[4].substring(3, 5)} pm`

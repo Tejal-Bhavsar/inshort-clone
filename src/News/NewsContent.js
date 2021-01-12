@@ -15,9 +15,10 @@ export default function NewsContent({news,newsResult}) {
                 <img  className="download" src="https://assets.inshorts.com/website_assets/images/playstore.png" alt="download" />
             </div>
 
-            {news.map((newsItem) => (
+            { news ?( 
+            news.map((newsItem) => (
                  <NewsCard  newsItem={newsItem} key={newsItem.title} newsResult={newsResult}/>
-            ))}
+            )) ) : "select a category first" }
            
 
         </Container>
