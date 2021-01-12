@@ -1,10 +1,10 @@
 import { Container } from '@material-ui/core'
 import React from 'react'
-import News from './News'
+import NewsCard from '../NewsCard/NewsCard'
 
 
 
-export default function NewsContent() {
+export default function NewsContent({news,newsResult}) {
     return (
         <Container maxWidth="md">
             <div className="content">
@@ -14,7 +14,11 @@ export default function NewsContent() {
                 <img src="https://assets.inshorts.com/website_assets/images/appstore.png"  className="download"  alt="download" />
                 <img  className="download" src="https://assets.inshorts.com/website_assets/images/playstore.png" alt="download" />
             </div>
-            <News />
+
+            {news.map((newsItem) => (
+                 <NewsCard  newsItem={newsItem} key={newsItem.title} newsResult={newsResult}/>
+            ))}
+           
 
         </Container>
     )
